@@ -1,0 +1,2 @@
+-- Advanced Analysis (Window Functions)
+SELECT Employee_ID, Department, Salary, AVG(Salary) OVER (PARTITION BY Department) as Dept_Avg_Salary, Salary - AVG(Salary) OVER (PARTITION BY Department) as Salary_Diff FROM hr_employee_data;
